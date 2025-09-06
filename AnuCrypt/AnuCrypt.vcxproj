@@ -135,6 +135,8 @@
     <ClCompile Include="AES256Decryptor.cpp" />
     <ClCompile Include="AES256Encryptor.cpp" />
     <ClCompile Include="AnuCrypt.cpp" />
+    <ClCompile Include="Base64Decoder.cpp" />
+    <ClCompile Include="Base64Encoder.cpp" />
     <ClCompile Include="FileValidator.cpp" />
     <ClCompile Include="KeyGenerator.cpp" />
     <ClCompile Include="KeyValidator.cpp" />
@@ -144,6 +146,8 @@
     <ClInclude Include="AES128Encryptor.h" />
     <ClInclude Include="AES256Decryptor.h" />
     <ClInclude Include="AES256Encryptor.h" />
+    <ClInclude Include="Base64Decoder.h" />
+    <ClInclude Include="Base64Encoder.h" />
     <ClInclude Include="FileValidator.h" />
     <ClInclude Include="KeyGenerator.h" />
     <ClInclude Include="KeyValidator.h" />

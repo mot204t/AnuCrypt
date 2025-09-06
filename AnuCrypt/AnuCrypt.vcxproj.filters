@@ -39,6 +39,12 @@
     <ClCompile Include="AES256Decryptor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Base64Encoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Base64Decoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AES128Decryptor.h">
@@ -60,6 +66,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AES256Decryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64Encoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64Decoder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

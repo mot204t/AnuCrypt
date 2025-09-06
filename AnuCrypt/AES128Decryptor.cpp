@@ -15,27 +15,23 @@ bool AES128Decryptor::decryptFile(const std::string& inputPath, const std::strin
             return false;
         }
 
-        // Read algorithm identifier
         uint8_t algId;
         inFile.read(reinterpret_cast<char*>(&algId), sizeof(algId));
 
-        // Verify this file was encrypted with AES-128
         if (algId != 0x01) {
             error = "File was not encrypted with AES-128. Use the correct decryption algorithm.";
             inFile.close();
             return false;
         }
 
-        // Read header
         std::vector<uint8_t> iv(12);
         std::string storedMD5(32, '\0');
         inFile.read(reinterpret_cast<char*>(iv.data()), iv.size());
         inFile.read(&storedMD5[0], 32);
 
-        // Read ciphertext and tag
         inFile.seekg(0, std::ios::end);
         size_t totalSize = inFile.tellg();
-        size_t dataStart = 1 + 12 + 32; // ALG_ID + IV + MD5
+        size_t dataStart = 1 + 12 + 32; 
         size_t dataSize = totalSize - dataStart;
 
         inFile.seekg(dataStart);
@@ -43,7 +39,6 @@ bool AES128Decryptor::decryptFile(const std::string& inputPath, const std::strin
         inFile.read(reinterpret_cast<char*>(ciphertext.data()), dataSize);
         inFile.close();
 
-        // Decrypt
         std::string plaintext;
         CryptoPP::GCM<CryptoPP::AES>::Decryption dec;
         dec.SetKeyWithIV(key.data(), key.size(), iv.data(), iv.size());
