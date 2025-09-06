@@ -134,23 +134,33 @@
     <ClCompile Include="AES128Encryptor.cpp" />
     <ClCompile Include="AES256Decryptor.cpp" />
     <ClCompile Include="AES256Encryptor.cpp" />
+    <ClCompile Include="AlgorithmIdentifier.cpp" />
     <ClCompile Include="AnuCrypt.cpp" />
     <ClCompile Include="Base64Decoder.cpp" />
     <ClCompile Include="Base64Encoder.cpp" />
     <ClCompile Include="FileValidator.cpp" />
+    <ClCompile Include="Hashing.cpp" />
     <ClCompile Include="KeyGenerator.cpp" />
     <ClCompile Include="KeyValidator.cpp" />
+    <ClCompile Include="MD5.cpp" />
+    <ClCompile Include="RC2.cpp" />
+    <ClCompile Include="Sha256.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AES128Decryptor.h" />
     <ClInclude Include="AES128Encryptor.h" />
     <ClInclude Include="AES256Decryptor.h" />
     <ClInclude Include="AES256Encryptor.h" />
+    <ClInclude Include="AlgorithmIdentifier.h" />
     <ClInclude Include="Base64Decoder.h" />
     <ClInclude Include="Base64Encoder.h" />
     <ClInclude Include="FileValidator.h" />
+    <ClInclude Include="Hashing.h" />
     <ClInclude Include="KeyGenerator.h" />
     <ClInclude Include="KeyValidator.h" />
+    <ClInclude Include="MD5.h" />
+    <ClInclude Include="RC2.h" />
+    <ClInclude Include="Sha256.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
